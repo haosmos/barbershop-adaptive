@@ -1,13 +1,11 @@
 "use strict";
 
-
 /* -- Подключение модулей  -- */
-
 
 /* Подключение gulp таск-раннера */
 var gulp = require("gulp");
 
-/* Подключение SASS препроцессора */
+/* Подключение SASS-препроцессора */
 var sass = require("gulp-sass");
 
 /* Запирает все ошибки в себя, не останавливая работу скрипта */
@@ -36,7 +34,7 @@ var rename = require("gulp-rename");
 /* Оптимизация изображений */
 var imagemin = require("gulp-imagemin");
 
-/* Конвертация изображений в Webp для blink браузеров */
+/* Конвертация изображений в webp для blink браузеров */
 var webp = require("gulp-webp");
 
 /* Сборка SVG-спрайтов */
@@ -59,17 +57,17 @@ var include = require("posthtml-include");
 
 
 /* Минифицирует HTML */
-gulp.task("html", function() {       /* название таска*/
-  return gulp.src("./source/*.html") /* откуда берет файлы */
+gulp.task("html", function() {  /* Название таски*/
+  return gulp.src("./source/*.html") /* Место, откуда берутся исходные файлы */
     .pipe(posthtml([
-      include()                      /* конвертирует все <include></include> */
+      include()  /* Конвертирует все <include></include> */
     ]))
-    .pipe(htmlmin({                  /* Минификация HTML*/
+    .pipe(htmlmin({  /* Минификация HTML*/
       collapseWhitespace: true,
-      ignoreCustomFragments: [ /<br>\s/gi ]  /*Не убираем пробел после <br> */
+      ignoreCustomFragments: [ /<br>\s/gi ]  /* Не убираем пробел после <br> */
     }))
-    .pipe(gulp.dest("./build"))      /* куда кидает файлы */
-    .pipe(server.stream());          /* команда перезагрузки сервера в браузере */
+    .pipe(gulp.dest("./build"))  /* Место выгрузки файлов для продакшена */
+    .pipe(server.stream());  /* Перезагрузка сервера в браузере */
 });
 
 /* Минифицирует стили */
@@ -81,7 +79,7 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(minify({
-      restructure: false          /*Отключаем смешивание общих стилей, чтобы не страдать*/
+      restructure: false  /* Отключаем смешивание общих стилей */
     }))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("./build/css"))
@@ -101,10 +99,10 @@ gulp.task("scripts", function () {
 /* Минифицирует изображения*/
 gulp.task("images", function() {
   return gulp.src("./source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([    /* imagemin сам по себе содержит в себе множество плагинов (работа с png,svg,jpg и тд) */
+    .pipe(imagemin([  /* Содержит в себе плагины для работа с png, svg, jpg */
       imagemin.optipng({optimizationLevel: 3}),  /* 1 - максимальное сжатие, 3 - безопасное сжатие, 10 - без сжатия */
-      imagemin.jpegtran({progressive: true}),    /* прогрессивная загрузка jpg (изображение постепенно прорисовывается при загрузке) */
-      imagemin.svgo()   /*Минификация svg от лишних тегов*/
+      imagemin.jpegtran({progressive: true}),  /* Прогрессивная загрузка jpg */
+      imagemin.svgo()  /*Минификация svg от лишних тегов*/
       ]))
     .pipe(gulp.dest("./build/img"));
 });
@@ -112,14 +110,14 @@ gulp.task("images", function() {
 /* Конвертация в webp*/
 gulp.task("webp", function() {
   return gulp.src("./build/img/towebp/**/*.{png,jpg}")
-    .pipe(webp({quality: 90})) /* Конвертируем png/jpg в webp с легкой потерей качества изображения */
+    .pipe(webp({quality: 90}))  /* Конвертирует png/jpg в webp */
     .pipe(gulp.dest("./build/img"));
 });
 
 /* Сборка спрайта SVG */
 gulp.task("sprite", function() {
   return gulp.src("./build/img/inline-icons/*.svg")
-    .pipe(svgstore({    /* Делает спрайт из SVG-файлов */
+    .pipe(svgstore({  /* Делает спрайт из SVG-файлов */
       inLineSvg: true
     }))
      .pipe(imagemin([
@@ -135,7 +133,7 @@ gulp.task("copy", function() {
   "./source/fonts/**/*.{woff,woff2}"/*,
   "./source/img/**"*/
   ], {
-    base: "./source/"     /* Говорим что базовый путь начинается из корня */
+    base: "./source/"  /* Указание базового пути из корня проекта */
   })
   .pipe(gulp.dest("build"));
 });
@@ -145,7 +143,7 @@ gulp.task("clean", function() {
   return del("build");
 });
 
-/* Удаление всех изображений*/
+/* Удаление всех изображений */
 gulp.task("clean-images", function() {
   return del("./build/img/**/*.{png,jpg,svg,webp}");
 });
@@ -157,11 +155,11 @@ gulp.task("images-watch", function() {
     "images",
     "webp",
     "sprite",
-    "html"      /* Это чтобы перезагрузить страничку*/
+    "html"  /* Перезагрузить страницу*/
     );
 });
 
-/* Таск компиляции всего проекта(npm run build) */
+/* Таск компиляции всего проекта (npm run build) */
 gulp.task("build", function(done) {
   run(
     "clean",
@@ -176,20 +174,22 @@ gulp.task("build", function(done) {
   );
 });
 
-/* Перед тем как таск serve стартует должен быть запущен build.
+/* Перед тем как таск serve стартует, должен быть запущен build.
 gulp serve для запуска локального сервера */
 gulp.task("serve", function() {
-  server.init({           /* инициирует сервер */
-    server: "./build/",   /* говорим откуда смотреть сайт ( . - текущий каталог) */
+  server.init({  /* Инициирует сервер */
+    server: "./build/",  /* Указываем, откуда смотреть сайт ( . - текущий
+     каталог) */
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  /* Ватчеры следящие за изменениями файлов: */
-  /* Например, препроцессорные ватчеры (следим за всеми Sass файлами во всех папках внутри папки sass),
-   вторым аргументом передаем какой таск нужно запустить если один из файлов изменился */
+  /* Вотчеры, следящие за изменениями файлов: */
+  /* Например, препроцессорные вотчеры (следим за всеми sass-файлами во всех
+   папках внутри папки sass), вторым аргументом передаем какой таск нужно
+   запустить, если один из файлов изменился */
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]);
   gulp.watch("source/js/*.js", ["scripts"]);
