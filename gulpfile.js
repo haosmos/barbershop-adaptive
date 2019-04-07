@@ -192,6 +192,7 @@ gulp.task("serve", function() {
      если один из файлов изменился */
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch("source/js/*.js", ["scripts"]);
   gulp.watch("source/img/**/*.{png,jpg,svg,webp}", ["images-watch"]);
 });

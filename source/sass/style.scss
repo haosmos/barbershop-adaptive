@@ -1,14 +1,19 @@
+@import "Common/normalize.scss";
+@import "Common/mixins.scss";
+@import "Common/variables.scss";
+@import "Common/scaffolding.scss";
+
+@import "blocks/page-header.scss";
 /*
 @import "general/normalize.scss";
 @import "general/visually-hidden.scss";
-@import "general/fonts.scss";
-@import "general/mixins.scss";
-@import "general/variables.scss";
+@import "Common/fonts.scss";
+@import "Common/mixins.scss";
+@import "Common/variables.scss";
 @import "general/global.scss";
 // -------- END OF GENERAL -------- //
-// ------------------------------------ //
+
 // -------- INDEX.HTML BLOCKS -------- //
-@import "blocks/header.scss";
 @import "blocks/site-nav.scss";
 @import "blocks/user-nav.scss";
 @import "blocks/main-nav.scss";
@@ -16,16 +21,19 @@
 @import "blocks/advantages.scss";
 @import "blocks/news.scss";
 @import "blocks/reviews.scss";
+
 // -------- FORM.HTML BLOCKS -------- //
 @import "blocks/appointment.scss";
 @import "blocks/form.scss";
 @import "blocks/footer.scss";
 @import "blocks/contacts.scss";
+
 // -------- PHOTO.HTML BLOCKS -------- //
 @import "blocks/works.scss";
 @import "blocks/price.scss";
 @import "blocks/month-best.scss";
 @import "blocks/discount.scss";
+
 // -------- OTHER BLOCKS -------- //
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
