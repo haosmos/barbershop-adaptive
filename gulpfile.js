@@ -8,6 +8,8 @@ var gulp = require("gulp");
 /* Подключение SASS-препроцессора */
 var sass = require("gulp-sass");
 
+var sourcemaps = require("gulp-sourcemaps");
+
 /* Запирает все ошибки в себя, не останавливая работу скрипта */
 var plumber = require("gulp-plumber");
 
@@ -23,7 +25,7 @@ var reload = server.reload;
 var htmlmin = require("gulp-htmlmin");
 
 /* Минификация CSS */
-var minify = require("gulp-csso");
+var cleanCSS = require("gulp-clean-css");
 
 /* Минификация JS */
 var uglify = require("gulp-uglify");
@@ -70,18 +72,23 @@ gulp.task("html", function() {  /* Название таски*/
     .pipe(server.stream());  /* Перезагрузка сервера в браузере */
 });
 
-/* Минифицирует стили */
+/* Собираем стили: компилируем из scss, расставляем префиксы, минифицируем,
+ переименовываем */
 gulp.task("style", function() {
   gulp.src("./source/sass/style.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(minify({
-      restructure: false  /*Отключаем смешивание общих стилей */
-    }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    /*.pipe(csso({
+      restructure: false,  /!*Отключаем смешивание общих стилей *!/
+      sourceMap: true
+    }))*/
     .pipe(rename("style.min.css"))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
 });
@@ -90,8 +97,10 @@ gulp.task("style", function() {
 gulp.task("scripts", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });

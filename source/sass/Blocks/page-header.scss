@@ -1,3 +1,8 @@
+@import "./common/variables.scss";
+@import "./common/scaffolding.scss";
+@import "./common/variables.scss";
+@import "./common/mixins.scss";
+
 .page-header {
   display: flex;
   flex-direction: column;

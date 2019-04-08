@@ -1,9 +1,13 @@
-@import "Common/normalize.scss";
-@import "Common/mixins.scss";
-@import "Common/variables.scss";
-@import "Common/scaffolding.scss";
+@import "./common/normalize.scss";
+@import "./common/mixins.scss";
+@import "./common/variables.scss";
+@import "./common/scaffolding.scss";
 
-@import "blocks/page-header.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/site-nav.scss";
+@import "./blocks/user-nav.scss";
+
 /*
 @import "general/normalize.scss";
 @import "general/visually-hidden.scss";
@@ -16,7 +20,6 @@
 // -------- INDEX.HTML BLOCKS -------- //
 @import "blocks/site-nav.scss";
 @import "blocks/user-nav.scss";
-@import "blocks/main-nav.scss";
 @import "blocks/stats.scss";
 @import "blocks/advantages.scss";
 @import "blocks/news.scss";
