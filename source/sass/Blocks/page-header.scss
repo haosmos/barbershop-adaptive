@@ -9,10 +9,14 @@
 }
 
 .page-header__logo {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  /*align-items: center;*/
   height: 85px;
 }
 
-.page-header__logo img {
+.page-header__logo-image {
   width: 226px;
   height: 85px;
 }
@@ -21,6 +25,7 @@
   .page-header {
     background-color: #000000
   }
+
   .page-header__logo {
     order: 2;
 
@@ -33,11 +38,14 @@
     background-position: center -9px;
   }
 
-  .page-header__logo img {
+  .page-header__logo-image {
     display: block;
     height: auto;
-    width: 226px;
-    margin: 40px auto 0;
+    width: 370px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -45,7 +53,7 @@
   .page-header__logo {
     height: 648px;
 
-    background-image: url("../img/bg-desktop.jpg");
+    background-image: url("../img/back-desktop.jpg");
     background-position: center 0;
     background-size: cover;
   }

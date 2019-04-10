@@ -92,15 +92,20 @@
 @media (max-width: $mobile-width-only) {
   .main-nav--closed .site-nav__item {
     display: none;
-  }
 
-  &--active {
-    display: block;
+    &--active {
+      display: block;
+      text-align: center;
+      padding-right: 38px;
+      border-bottom: none;
+    }
   }
 
   .main-nav--closed .site-nav__item--active a {
     padding-right: 70px;
     padding-left: 70px;
+
+    text-align: center;
   }
 
   .main-nav--closed .user-nav__item {
@@ -159,7 +164,6 @@
 
     background-color: #6a4d38;
   }
-
 }
 
 @media (min-width: $tablet-width) {

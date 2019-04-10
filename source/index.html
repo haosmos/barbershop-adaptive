@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Barbershop Borodinski</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="scc/style.min.css" as="style">
+    <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="fonts/pt-sans-narrow-v8-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/pt-sans-narrow-v8-latin_cyrillic-700.woff2" as="font">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -22,10 +22,11 @@
     </a>
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle"
+              type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-nav">
-          <li class="site-nav__item main-nav__item main-nav__item--active">
+          <li class="site-nav__item main-nav__item site-nav__item--active">
             <a class="site-nav__link site-nav__link--active">Главная</a>
           </li>
           <li class="site-nav__item main-nav__item">
@@ -37,7 +38,7 @@
         </ul>
         <ul class="main-nav__list user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__login user-nav__link" href="login.html"> <!--<a class="user-nav__login user-nav__link" href="login.html">-->
+            <a class="user-nav__login user-nav__link" href="login.html">
               <svg class="user-nav__login-icon" width="16" height="16"
                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg>
               Войти
