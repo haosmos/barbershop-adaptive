@@ -1,0 +1,37 @@
+.slider__toggles {
+  width: 95px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+  .slider__toggle {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin-right: 25px;
+
+    font-size: 0;
+    line-height: 0;
+
+    background: none;
+    border: 1px solid $white;
+
+    transform: rotate(45deg);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--dark {
+      border-color: #353535;
+    }
+
+    &--active {
+      background-color: $white;
+    }
+
+    &--active-dark {
+      background-color: #353535;
+    }
+  }
+
