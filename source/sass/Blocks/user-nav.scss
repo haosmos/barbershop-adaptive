@@ -16,7 +16,7 @@
 
 .user-nav__login-icon {
   position: absolute;
-  top: 29px;
+  top: 18px;
   left: 25px;
 
   width: 16px;
@@ -58,8 +58,9 @@
     }
   }
 
-  .user-list__login-icon {
-    top: 29px;
+  .user-nav__login-icon {
+    position: absolute;
+    top: 27px;
     left: 12px;
   }
 }
@@ -111,8 +112,9 @@
     }
   }
 
-  .user-nav_login-icon {
+  .user-nav__login-icon {
     left: 15px;
+    top: 29px;
   }
 }
 
