@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-}
+
   .slider__toggle {
     width: 12px;
     height: 12px;
@@ -34,4 +34,16 @@
       background-color: #353535;
     }
   }
+}
 
+@media (min-width: $tablet-width) {
+  .slider__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+}
