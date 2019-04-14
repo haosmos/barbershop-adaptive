@@ -1,0 +1,72 @@
+.contacts {
+  @include content-padding;
+  padding-bottom: 26px;
+  color: $white;
+
+  .contacts__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .contacts__address {
+    margin: 0;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contacts__phone {
+    color: $white;
+    border-color: $stroke-dark;
+
+    &:hover {
+      border-color: #545454;
+    }
+
+    &:active {
+      background-color: #252525;
+      color: rgba($white, 0.3);
+      border-color: transparent;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding: 0;
+
+    .contacts__title {
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .contacts__address {
+      margin-bottom: 2px;
+      text-align: left;
+    }
+
+    .contacts__phone {
+      position: relative;
+      padding: 0;
+      padding-left: 33px;
+      font-weight: normal;
+      text-align: left;
+      border: none;
+
+      &::after {
+        content: "Тел.:";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font: inherit;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+      }
+
+      &:active {
+        background-color: $dark-grey;
+      }
+    }
+  }
+}

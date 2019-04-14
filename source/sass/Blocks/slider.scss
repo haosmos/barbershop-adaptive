@@ -1,26 +1,18 @@
-.slider__toggles {
-  width: 95px;
-  margin: 0 auto;
+.slider {
+  width: 73px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
-  .slider__toggle {
-    width: 12px;
-    height: 12px;
+  .slider__button {
+    width: 7px;
+    height: 7px;
     padding: 0;
-    margin-right: 25px;
-
     font-size: 0;
     line-height: 0;
-
     background: none;
     border: 1px solid $white;
 
     transform: rotate(45deg);
-
-    &:last-child {
-      margin-right: 0;
-    }
 
     &--dark {
       border-color: #353535;
@@ -37,13 +29,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .slider__toggles {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .slider__toggles {
+  .slider {
     display: none;
   }
 }

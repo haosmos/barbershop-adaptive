@@ -194,7 +194,7 @@
               Приходите, постригитесь и узнаете, в чём здесь подвох!</p>
           </li>
         </ul>
-        <a class="news__to-all link-button" href="#">Показать все</a>
+        <a class="news__button link-button" href="#">Показать все</a>
       </div>
     </section>
 
@@ -385,34 +385,64 @@
     </section>-->
   </main>
 
-  <footer class="footer">
-    <div class="footer__contacts contacts">
-      <b class="contacts__title">Барбершоп Бородинский</b>
-      <p class="contacts__address">
-        г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+    <footer class="footer">
+      <div class="footer__contacts contacts">
+        <b class="contacts__title">Барбершоп Бородинский</b>
+        <p class="contacts__address">
+          г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+        </p>
+        <a href="tel:+78125556666" class="contacts__phone link-button">+7 (812) 555-66-66</a>
+      </div>
+      <div class="footer__social social">
+        <span class="social__text">Давайте дружить!</span>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://vk.com/htmlacademy" class="social__link social__link--vk">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--fb">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--ig">Инстаграм</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright copyright">
+        <span>Дизайн: HTML Academy</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive"
+           class="copyright__link link-button">Верстка: haosmos, front-end<br>
+          разработчик 84-го уровня
+        </a>
+      </div>
+    </footer>
+    <div class="modal">
+      <h1 class="modal__title">Личный кабинет</h1>
+      <p class="modal__info-text">
+        Введите свой логин и пароль, чтобы войти
       </p>
-      <a href="tel:+78125556666" class="contacts__phone link-button">+7 (812) 555-66-66</a>
+      <form action="https://echo.htmlacademy.ru" class="modal__form" method="post">
+        <p class="modal__input-container">
+          <label for="user" class="visually-hidden">Логин</label>
+          <input type="text" class="modal__input input" name="user" id="user" placeholder="Логин" required>
+          <svg class="modal__icon" width="15" height="15"><use xlink:href="img/sprite.svg#user"></use></svg>
+        </p>
+        <p class="modal__input-container">
+          <label for="password" class="visually-hidden">Пароль</label>
+          <input type="text" class="modal__input input" name="password" id="password" placeholder="Пароль" required>
+          <svg class="modal__icon" width="15" height="15"><use xlink:href="img/sprite.svg#lock"></use></svg>
+        </p>
+        <input type="checkbox" class="visually-hidden" name="memorize-me" id="memorize-me">
+        <label class="modal__memorize-me" for="memorize-me">
+          Запомните меня
+          <span class="modal__check-indicator"></span>
+        </label>
+        <a href="#" class="modal__restore">Я забыл пароль!</a>
+        <input type="submit" class="modal__login-button" value="Войти">
+        <button class="modal__close link-button" type="button">Закрыть</button>
+      </form>
     </div>
-    <div class="footer__social social">
-      <span class="social__text">Давайте дружить!</span>
-      <ul class="social__list">
-        <li class="social__item">
-          <a href="https://vk.com/htmlacademy" class="social__link social__link--vk">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--fb">Фейсбук</a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--ig">Инстаграм</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__copyright copyright">
-      <span>Разработано: </span>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link link-button">HTML Academy</a>
-    </div>
-  </footer>
-
-  <script src="./js/nav-menu-mobile.min.js" type="text/javascript"></script>
+    <script src="js/picturefill.min.js" type="text/javascript"></script>
+    <script src="js/svg4everybody.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
   </body>
 </html>
