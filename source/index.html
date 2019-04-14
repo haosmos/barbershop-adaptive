@@ -105,35 +105,67 @@
     </section>
 
     <section class="advantages">
+      <h2 class="visually-hidden">Наши преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--quick">
+          <b class="advantages__title">Быстро</b>
+          <p class="advantages__text">
+            Мы делаем свою работу быстро! Два&nbsp;часа пролетят незаметно
+            и&nbsp;Вы &ndash; счастливый обладатель стильной стрижки-минутки
+          </p>
+        </li>
+        <li class="advantages__item advantages__item--cool">
+          <b class="advantages__title">Круто</b>
+          <p class="advantages__text">
+            Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду
+            футбола или кино. Во&nbsp;всяком случае внешне.
+          </p>
+        </li>
+        <li class="advantages__item advantages__item--expensive">
+          <b class="advantages__title">Дорого</b>
+          <p class="advantages__text">
+            Наши мастера &ndash; профессионалы своего дела и не могут стоить дёшево.
+            К тому же, разве цена не даёт определённый статус?
+          </p>
+        </li>
+      </ul>
+      <div class="advantages__slider slider">
+        <button class="slider__button slider__button--active">1 слайд</button>
+        <button class="slider__button">2 слайд</button>
+        <button class="slider__button">3 слайд</button>
+      </div>
+    </section>
+
+   <!-- <section class="advantages">
       <div class="advantages__wrapper slider">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages__list slider__list">
-          <li class="advantages__item advantages__item--fast slider__item">
+          <li class="advantages__item advantages__item&#45;&#45;fast slider__item">
             <h3 class="advantages__title">Быстро</h3>
             <p class="advantages__description">Мы делаем свою работу быстро!
               Два часа пролетят незаметно и вы — счастливый обладатель
               стильной стрижки-минутки.</p>
           </li>
-          <li class="advantages__item advantages__item--cool slider__item">
+          <li class="advantages__item advantages__item&#45;&#45;cool slider__item">
             <h3 class="advantages__title">Круто</h3>
             <p class="advantages__description">Забудьте, как вы стриглись
               раньше. Мы сделаем из вас звезду футбола или кино. Во всяком
               случае внешне.</p>
           </li>
-          <li class="advantages__item advantages__item--price slider__item">
+          <li class="advantages__item advantages__item&#45;&#45;price slider__item">
             <h3 class="advantages__title">Дорого</h3>
             <p class="advantages__description">Наши мастера — профессионалы
               своего дела и не могут стоить дёшево. К тому же, разве цена
               не даёт определённый статус?</p>
           </li>
         </ul>
-        <p class="advantages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
+        <div class="advantages__slider slider">
+          <button class="slider__button slider__button&#45;&#45;active">1 слайд</button>
+          <button class="slider__button">2 слайд</button>
+          <button class="slider__button">3 слайд</button>
+        </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="news">
       <div class="news__wrapper">
@@ -162,11 +194,141 @@
               Приходите, постригитесь и узнаете, в чём здесь подвох!</p>
           </li>
         </ul>
-        <a class="news__to-all button" href="#">Показать все</a>
+        <a class="news__to-all link-button" href="#">Показать все</a>
       </div>
     </section>
 
     <section class="reviews">
+      <h2 class="reviews__title">Отзывы о нас</h2>
+      <a href="#" class="reviews__send link-button">Оставить свой</a>
+      <div class="reviews__list">
+        <blockquote class="reviews__item">
+          <picture class="reviews__author-photo">
+            <source media="(min-width: 1200px)" srcset="img/picture-travis-desktop.jpg" >
+            <source media="(min-width: 768px)" srcset="img/picture-travis-tablet.jpg" >
+            <img src="img/picture-travis-mobile.jpg" alt="">
+          </picture>
+          <div class="reviews__container">
+            <cite class="reviews__author-name">Трэвис Баркер</cite>
+            <p class="reviews__text">
+              Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы
+              было видно новую татуировку!
+            </p>
+          </div>
+        </blockquote>
+        <blockquote class="reviews__item">
+          <picture class="reviews__author-photo">
+            <source media="(min-width: 768px)" srcset="img/avatar-tablet.jpg" >
+            <img src="img/avatar-mobile.jpg" alt="">
+          </picture>
+          <div class="reviews__container">
+            <cite class="reviews__author-name">Джон Смит</cite>
+            <p class="reviews__text">
+              Отличную стрижку мне сделали ребята.
+            </p>
+          </div>
+        </blockquote>
+        <blockquote class="reviews__item">
+          <picture class="reviews__author-photo">
+            <img src="img/avatar-mobile.jpg" width="50" height="51" alt="">
+          </picture>
+          <div class="reviews__container">
+            <cite class="reviews__author-name">Иван Бородайло</cite>
+            <p class="reviews__text">
+              В Бородинском ваша борода в надёжных руках!
+            </p>
+          </div>
+        </blockquote>
+        <button class="reviews__arrow reviews__arrow--prev" type="button">Предыдущий</button>
+        <button class="reviews__arrow reviews__arrow--next" type="button">Следующий</button>
+      </div>
+      <div class="reviews__slider slider">
+        <button class="slider__button slider__button--dark slider__button--active-dark">1</button>
+        <button class="slider__button slider__button--dark">2</button>
+        <button class="slider__button slider__button--dark">3</button>
+      </div>
+    </section>
+
+    <!--<section class="reviews">
+      <div class="reviews__wrapper slider">
+        <h2 class="reviews__title">
+          Отзывы о нас
+        </h2>
+        <a href="#" class="reviews__write button">
+          Оставить свой
+        </a>
+        <div class="reviews__list">
+          <div class="reviews__item">
+            <blockquote class="reviews__item-content slider__item">
+              <p class="reviews__author-picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/reviews-desktop-img.jpg">
+                  <source media="(min-width: 768px)" srcset="img/reviews-tablet-img.png">
+                  <img src="img/reviews-mobile-img.png" alt="Фото Трэвиса Баркера" class="reviews__author-image">
+                </picture>
+              </p>
+              <p class="reviews__text">
+                <cite class="reviews__author-name">
+                  Трэвис Баркер
+                </cite>
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                чтобы было видно новую татуировку!
+              </p>
+            </blockquote>
+          </div>
+          <div class="reviews__item">
+            <blockquote class="reviews__item-content slider__item">
+              <p class="reviews__author-picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/reviews-desktop-img.jpg">
+                  <source media="(min-width: 768px)" srcset="img/reviews-tablet-img.png">
+                  <img src="img/reviews-mobile-img.png" alt="Фото Трэвиса Баркера" class="reviews__author-image">
+                </picture>
+              </p>
+              <p class="reviews__text">
+                <cite class="reviews__author-name">
+                  Трэвис Баркер
+                </cite>
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                чтобы было видно новую татуировку!2
+              </p>
+            </blockquote>
+          </div>
+          <div class="reviews__item">
+            <blockquote class="reviews__item-content slider__item">
+              <p class="reviews__author-picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/picture-travis-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/picture-travis-tablet.jpg">
+                  <img src="img/picture-travis-mobile.jpg"
+                       alt="Фото Трэвиса Баркера" class="reviews__author-image">
+                </picture>
+              </p>
+              <p class="reviews__text">
+                <cite class="reviews__author-name">
+                  Трэвис Баркер
+                </cite>
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                чтобы было видно новую татуировку!3
+              </p>
+            </blockquote>
+          </div>
+          <button class="reviews__prev button" type="button">
+            Предыдущий отзыв
+          </button>
+          <button class="reviews__next button" type="button">
+            Следующий отзыв
+          </button>
+        </div>
+        <p class="reviews__toggles ">
+          <span class="reviews-slider__toggle"></span>
+          <span class="reviews-slider__toggle"></span>
+          <span class="reviews-slider__toggle"></span>
+        </p>
+      </div>
+    </section>-->
+
+    <!--<section class="reviews">
       <div class="reviews__wrapper slider">
         <h2 class="reviews__title">Отзывы о нас</h2>
         <a class="reviews__write button" href="#">Оставить свой</a>
@@ -183,9 +345,14 @@
                      width="50" height="33" alt="Фото Трэвиса Баркера">
               </picture>
             </p>
-            <cite class="reviews__author-name">Трэвис Баркер</cite>
-            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве,
-              заскочил побриться, чтобы было видно новую татуировку!</p>
+            <div class="reviews__container">
+              <cite class="reviews__author-name">Трэвис Баркер</cite>
+              <p class="reviews__text">
+                Спасибо за лысину! Был проездом в Москве, заскочил
+                побриться, чтобы
+                было видно новую татуировку!
+              </p>
+            </div>
           </blockquote>
           <blockquote class="reviews__item  slider__item">
             <p class="reviews__author-picture">
@@ -204,52 +371,45 @@
             <p class="reviews__text">В Бородинском ваша борода в надёжных
               руках!</p>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <button class="reviews__arrow reviews__arrow&#45;&#45;prev">Предыдущий отзыв</button>
+          <button class="reviews__arrow reviews__arrow&#45;&#45;next">Следующий отзыв</button>
         </div>
+
         <p class="reviews__toggles slider__toggles">
           <button class="slider__toggle" type="button">1</button>
           <button class="slider__toggle" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
         </p>
+
       </div>
-    </section>
+    </section>-->
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__contacts contacts">
-        <b class="contacts__title">Барбершоп «Бородинский»</b>
-        <p class="contacts__text">
-          г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-          <a class="contacts__phone" href="tel:+78125556666">
-            <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
-          </a>
-        </p>
-      </div>
-      <div class="page-footer__social social">
-        <b class="social__title">Давайте дружить!</b>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte"
-               href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook"
-               href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram"
-               href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработчик красоты сей ненаглядной:</b>
-        <a class="button copyright__link"
-           href="https://vk.com/haosmos">Виталий Мещеряков aka Haosmos,
-          front-end developer 80-го уровня</a>
-      </div>
+  <footer class="footer">
+    <div class="footer__contacts contacts">
+      <b class="contacts__title">Барбершоп Бородинский</b>
+      <p class="contacts__address">
+        г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+      </p>
+      <a href="tel:+78125556666" class="contacts__phone link-button">+7 (812) 555-66-66</a>
+    </div>
+    <div class="footer__social social">
+      <span class="social__text">Давайте дружить!</span>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="https://vk.com/htmlacademy" class="social__link social__link--vk">Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--fb">Фейсбук</a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--ig">Инстаграм</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__copyright copyright">
+      <span>Разработано: </span>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link link-button">HTML Academy</a>
     </div>
   </footer>
 
