@@ -24,7 +24,7 @@
   @include content-padding;
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
+  justify-content: space-between;
 
   .news__item {
     display: flex;
@@ -114,33 +114,38 @@
     color: $black;
   }
 
-  .news__button {
+  .news__to-all {
     width: 280px;
     margin-top: 6px;
+    padding: 18px 90px;
+    text-align: center;
   }
 }
 
 @media (min-width: $tablet-width) {
   .news__wrapper {
+    /*@include content-padding;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    width: $tablet-width;
+    width: 768px;
     padding-top: 42px;
     padding-bottom: 42px;
 
     .news__title {
+      @include content-padding;
       @include list-reset;
       @include title-font-tablet;
       order: -2;
-      margin-bottom: 27px;
+      /*margin-bottom: 27px;*/
       padding-top: 4px;
+      padding: 0;
     }
 
     .news__list {
-      @include content-padding;
+      /*@include content-padding;*/
       /*@include list-reset;*/
       display: flex;
       flex-direction: row;
@@ -155,9 +160,9 @@
 
     .news__item {
       @include list-reset;
-      width: 310px;
+      width: 279px;
       justify-content: flex-start;
-      margin-top: 26px;
+      margin-top: 54px;
       margin-bottom: 42px;
       /*padding-left: 0;*/
 
@@ -169,11 +174,14 @@
     }
 
     .news__to-all  {
-      @include list-reset;
+      /*@include content-padding;*/
+      /*@include list-reset;*/
       order: -1;
-      align-self: flex-start;
+      /*align-self: auto;*/
       width: 160px;
-      margin-bottom: 61px;
+      margin-right: 64px;
+      /*padding-top: 18px;
+      padding-bottom: 18px;*/
     }
 
     .news__date {
@@ -228,7 +236,7 @@
       @include list-reset;
       width: 310px;
       justify-content: flex-start;
-      margin-top: 26px;
+      margin-top: 54px;
       margin-bottom: 42px;
       /*padding-left: 0;*/
 
@@ -240,12 +248,13 @@
     }
 
     .news__to-all  {
-      @include list-reset;
-      @include content-padding;
-      order: -1;
-      align-self: flex-start;
+      /*@include list-reset;*/
+      /*@include list-reset;
+      order: -1;*/
+      /*align-self: auto;*/
       width: 160px;
-      margin-bottom: 61px;
+      margin-right: 120px;
+      padding-top: 19px;
     }
 
     .news__date {
@@ -261,17 +270,3 @@
   }
 }
 
-/*.news__item {
-  width: 290px;
-  margin-right: 30px;
-
-  &:nth-of-type(3n+3) {
-    width: 320px;
-    margin-right: 0;
-  }
-
-  &:nth-of-type(5),
-  &:nth-of-type(6) {
-    display: flex;
-  }
-}*/

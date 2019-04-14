@@ -1,0 +1,33 @@
+.button {
+  display: block;
+  width: 280px;
+  /*padding: 18px 30px;*/
+  padding-top: 19px;
+  padding-bottom: 18px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background: none;
+  border: 1px solid $stroke-color;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active {
+    color: rgba($black, 0.3);
+    background-color: #d5c9bd;
+  }
+}
+
+/*@media (min-width: $desktop-width) {
+  padding-top: 20px;
+}*/
