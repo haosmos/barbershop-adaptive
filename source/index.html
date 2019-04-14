@@ -173,8 +173,15 @@
         <div class="reviews__list  slider__list">
           <blockquote class="reviews__item  slider__item">
             <p class="reviews__author-picture">
-              <img class="reviews__author-image" src="img/picture-travis.jpg"
-                   width="50" height="33" alt="Фото Трэвиса Баркера">
+              <picture class="reviews__author-photo">
+                <source media="(min-width: 1200px)"
+                        srcset="img/picture-travis-desktop.jpg" >
+                <source media="(min-width: 768px)"
+                        srcset="img/picture-travis-tablet.jpg" >
+                <img class="reviews__author-image"
+                     src="img/picture-travis-mobile.jpg"
+                     width="50" height="33" alt="Фото Трэвиса Баркера">
+              </picture>
             </p>
             <cite class="reviews__author-name">Трэвис Баркер</cite>
             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве,
