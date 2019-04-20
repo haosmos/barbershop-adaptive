@@ -38,6 +38,18 @@
     background-repeat: no-repeat;
     background-position: center -9px;
 
+    &--inner {
+      position: relative;
+      height: 214px;
+      background-position: center;
+      background-size: cover;
+
+      &::after {
+        @include delimiter($beige);
+        height: 41px;
+      }
+    }
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/back-tablet.jpg@2x.jpg");
       background-size: 1338px auto;
@@ -57,11 +69,19 @@
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
-    height: 648px;
+    /*height: 648px;*/
 
     background-image: url("../img/back-desktop.jpg");
     background-position: center 0;
     background-size: cover;
+
+    &--inner {
+      height: 307px;
+
+      &::after {
+        height: 64px;
+      }
+    }
   }
 
   .page-header__logo img {

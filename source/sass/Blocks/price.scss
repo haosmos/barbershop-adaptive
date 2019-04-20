@@ -1,0 +1,130 @@
+.price {
+  @include content-padding;
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 54px;
+  background-color: $mid-grey;
+
+  &::after {
+    @include delimiter($dark-grey);
+  }
+
+  .price__title {
+    @include title-font-mobile;
+    margin-bottom: 20px;
+    color: $white;
+  }
+
+  .price__table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    font-size: 20px;
+    color: $white;
+  }
+
+  .price__index {
+    display: none;
+  }
+
+  .price__service {
+    font-weight: bold;
+    padding-bottom: 14px;
+  }
+
+  .price__washing {
+    display: none;
+
+    &--mobile {
+      display: block;
+      font-weight: normal;
+    }
+  }
+
+  .price__value {
+    text-align: right;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    padding-top: 44px;
+
+    &::after {
+      display: none;
+    }
+
+    .price__title {
+      @include title-font-tablet;
+      margin-bottom: 48px;
+    }
+
+    .price__table {
+      margin-bottom: 9px;
+
+      td {
+        border: 1px solid rgba($white, 0.1);
+      }
+    }
+
+    .price__index {
+      display: table-cell;
+      width: 68px;
+      text-align: center;
+      color: rgba($white, 0.3);
+    }
+
+    .price__service {
+      padding-top: 13px;
+      padding-left: 19px;
+      padding-right: 11px;
+      text-align: left;
+    }
+
+    .price__washing {
+      display: table-cell;
+      padding-left: 20px;
+      text-align: left;
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    .price__value {
+      padding-right: 45px;
+      padding-left: 20px;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price {
+    display: flex;
+    justify-content: center;
+    padding-top: 78px;
+    padding-bottom: 84px;
+
+    .price__table {
+      width: 630px;
+      margin-bottom: 0;
+      margin-right: 60px;
+    }
+
+    .price__offer {
+      margin-top: 88px;
+      width: 269px;
+    }
+
+    .price__service {
+      padding-right: 20px;
+    }
+
+    .price__value {
+      padding-right: 42px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.discount {
+  border: 1px solid rgba($white, 0.1);
+
+  .discount__text {
+    width: 125px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    padding-left: 113px;
+    font-size: 20px;
+    color: $white;
+
+    background-image: url("../img/clock.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 58px 57px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .discount {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .discount__text {
+      width: auto;
+      padding-top: 20px;
+      padding-bottom: 21px;
+      padding-left: 160px;
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: bold;
+
+      text-transform: uppercase;
+      background-size: 72px 71px;
+      background-position: left top;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .discount {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px 50px;
+
+    background-image: url("../img/clock.svg");
+    background-repeat: no-repeat;
+    background-position: center top 34px;
+    background-size: 142px 139px;
+
+    .discount__text {
+      margin-top: auto;
+      padding: 0;
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: normal;
+      text-transform: none;
+      text-align: center;
+      background: none;
+    }
+  }
+}
