@@ -1,0 +1,327 @@
+.works {
+  @include content-padding;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 67px;
+
+  &::after {
+    @include delimiter($bg-lightgrey);
+  }
+
+  .works__title {
+    @include title-font-mobile;
+    padding-top: 30px;
+    padding-bottom: 29px;
+    letter-spacing: 0.3px;
+  }
+
+  .works__to-main {
+    display: none;
+  }
+
+  .works__item {
+    margin-bottom: 21px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .works__image-container {
+    position: relative;
+    height: 176px;
+    background-color: #e6ded6;
+    text-align: center;
+
+    &--month-best {
+      height: 480px;
+    }
+  }
+
+  .works__desc {
+    padding-top: 23px;
+    padding-bottom: 13px;
+    padding-left: 22px;
+    padding-right: 25px;
+    border: 1px solid $stroke-color;
+    border-top: none;
+
+    &--month-best {
+      padding-top: 19px;
+      padding-bottom: 0;
+    }
+  }
+
+  .works__name {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: bold;
+  }
+
+  .works__comment {
+    margin: 0;
+    margin-bottom: 16px;
+    letter-spacing: 0.15px;
+  }
+
+  .works__service-list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .works__service-item {
+    margin-right: 37px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &:nth-child(2n+2) {
+      // margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--hair {
+      padding-left: 36px;
+      background-image: url("../img/scissors-icon.svg");
+      background-size: 23px 22px;
+    }
+
+    &--beard {
+      padding-left: 44px;
+      background-image: url("../img/beard-icon.svg");
+      background-size: 23px 21px;
+    }
+
+    &--mustache {
+      position: relative;
+      padding-left: 46px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: -12px;
+        width: 45px;
+        height: 12px;
+        background-image: url("../img/mustache-icon.svg");
+        background-size: 45px 12px;
+        background-position: center;
+      }
+    }
+  }
+
+  .works__best {
+    position: absolute;
+    left: 0;
+    bottom: 29px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 54px;
+    padding-bottom: 103px;
+
+    &::after {
+      height: 41px;
+    }
+
+    .works__title {
+      @include title-font-tablet;
+      min-width: 480px;
+      margin-top: 3px;
+      margin-bottom: 45px;
+      padding: 0;
+    }
+
+    .works__to-main {
+      display: block;
+      width: 160px;
+      align-self: flex-start;
+    }
+
+    .works__item {
+      display: flex;
+      width: 100%;
+      margin-bottom: 41px;
+
+      background-color: $stroke-color;
+    }
+
+    .works__image-container {
+      flex-shrink: 0;
+      width: 270px;
+      height: 294px;
+      margin: auto 0;
+
+      &--month-best {
+        height: 480px;
+      }
+    }
+
+    .works__desc {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding-top: 38px;
+      padding-left: 50px;
+      padding-right: 41px;
+      padding-bottom: 23px;
+      border-left: none;
+      border-top: 1px solid $stroke-color;
+
+      background-color: $beige;
+
+      &--month-best {
+        padding-top: 43px;
+      }
+    }
+
+    .works__name {
+      margin-bottom: 26px;
+    }
+
+    .works__service-list {
+      margin-top: auto;
+    }
+
+    .works__service-item {
+      &:not(:first-child):last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    .works__best {
+      top: 35px;
+      left: -2px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .works {
+    padding-bottom: 47px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .works__title {
+      min-width: 800px;
+      max-width: 960px;
+      order: -3;
+      margin-bottom: 87px;
+    }
+
+    .works__to-main {
+      order: -2;
+    }
+
+    .works__item {
+      width: 294px;
+      flex-direction: column;
+      margin-right: 39px;
+
+      &--month-best {
+        position: relative;
+        width: 960px;
+        flex-direction: row;
+        order: -1;
+        margin-right: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+        margin-bottom: 41px;
+      }
+    }
+
+    .works__image-container {
+      width: 294px;
+      height: 294px;
+
+      &--month-best {
+        position: static;
+        width: 480px;
+        height: 480px;
+      }
+    }
+
+    .works__desc {
+      padding-top: 29px;
+      padding-left: 34px;
+      padding-right: 25px;
+      padding-bottom: 31px;
+      border-top: none;
+      border-left: 1px solid $stroke-color;
+
+      &--month-best {
+        padding-top: 128px;
+        padding-left: 41px;
+        padding-right: 100px;
+        padding-bottom: 27px;
+        border-left: none;
+        border-top: 1px solid $stroke-color;
+
+        .works__comment {
+          padding-right: 30px;
+        }
+      }
+    }
+
+    .works__comment {
+      margin-bottom: 25px;
+    }
+
+    .works__service-item {
+      &:nth-child(n) {
+        margin-bottom: 0;
+      }
+
+      &:not(:first-child):last-child {
+        margin-bottom: 0;
+      }
+
+      &--hair {
+        background-position: left top 2px;
+      }
+
+      &--beard {
+        padding-left: 41px;
+        background-position: left top 2px;
+      }
+
+      &--mustache {
+        padding-left: 53px;
+
+        &::after {
+          top: 7px;
+          left: -4px;
+        }
+      }
+    }
+
+    .works__best {
+      right: 0;
+      left: auto;
+      top: 26px;
+    }
+  }
+}
