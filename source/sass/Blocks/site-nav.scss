@@ -1,32 +1,36 @@
+/*
 @import "./common/variables.scss";
 @import "./common/scaffolding.scss";
 @import "./common/variables.scss";
 @import "./common/mixins.scss";
+*/
 
 .site-nav {
   @include list-reset;
-}
 
-.site-nav__item {
-  background-color: $light-brown;
-  border-bottom: 1px solid #71543f;
-}
+  .site-nav__item {
+    background-color: $light-brown;
+    border-bottom: 1px solid #71543f;
+  }
 
-.site-nav__link {
-  display: block;
-  padding: 13px 21px;
+  .site-nav__link {
+    display: block;
+    padding: 13px 21px;
 
-  line-height: 24px;
-  font-weight: bold;
-  color: $white;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: inset 0 1px 1px 0 rgba(136, 110, 91, 1);
+    line-height: 24px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: inset 0 1px 1px 0 rgba(136, 110, 91, 1);
 
-  &[href]:active {
-    color: rgba($white, 0.3);
+    &[href]:active {
+      color: rgba($white, 0.3);
+    }
   }
 }
+
+
 
 @media (min-width: $tablet-width) {
   .site-nav {
