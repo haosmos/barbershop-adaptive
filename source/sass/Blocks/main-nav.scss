@@ -1,7 +1,7 @@
-@import "./common/variables.scss";
+/*@import "./common/variables.scss";
 @import "./common/scaffolding.scss";
 @import "./common/variables.scss";
-@import "./common/mixins.scss";
+@import "./common/mixins.scss";*/
 
 .main-nav {
   position: relative;
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav--closed .site-nav__item {
+  .main-nav--closed .main-nav__item {
     display: none;
 
     &--active {
