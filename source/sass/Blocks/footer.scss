@@ -20,7 +20,7 @@
 
 @media (min-width: $tablet-width) {
   .footer {
-    @include content-padding;
+    /*@include content-padding;*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,17 +30,19 @@
 
     .footer__contacts {
       width: 320px;
-      margin-right: 160px;
+      /*margin-right: 320px;*/
     }
 
     .footer__social {
       order: 2;
       width: 638px;
       margin-top: 49px;
+
     }
 
     .footer__copyright {
-      width: 160px;
+      width: 300px;
+      margin-left: 32px;
     }
   }
 }
@@ -60,7 +62,7 @@
 
     .footer__copyright {
       width: 320px;
-      /*align-items: flex-end;*/
+      align-items: flex-end;
     }
   }
 }
