@@ -1,0 +1,218 @@
+.modal {
+  position: fixed;
+  display: none;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 33px 20px 37px;
+  background-color: $beige;
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
+  z-index: 100;
+
+  &--open {
+    display: block;
+  }
+
+  .modal__title {
+    @include title-font-mobile;
+    margin-bottom: 13px;
+  }
+
+  .modal__info-text {
+    margin: 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .modal__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .modal__input-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+
+    &:first-of-type {
+      margin-bottom: 6px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 26px;
+    }
+  }
+
+  .modal__input {
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 17px;
+    padding-right: 37px;
+    box-sizing: border-box;
+
+    font-family: inherit;
+    line-height: 30px;
+    color: $black;
+    border: 1px solid $stroke-color;
+
+    &::placeholder {
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  .modal__icon {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 17px;
+    height: 17px;
+    transform: translateY(-50%);
+  }
+
+  .modal__memorize-me {
+    position: relative;
+    margin-bottom: 29px;
+    padding: 2px 0 1px;
+    padding-left: 48px;
+    line-height: 30px;
+    cursor: pointer;
+
+    .modal__check-indicator {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 31px;
+      height: 31px;
+      border: 1px solid $stroke-color;
+      background-color: $white;
+    }
+  }
+
+  input[type="checkbox"]:checked + .modal__memorize-me {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 2px;
+      height: 17px;
+      background-color: $black;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 18px;
+      height: 2px;
+      background-color: $black;
+      z-index: 2;
+    }
+  }
+
+  .modal__restore {
+    align-self: flex-start;
+    padding-top: 1px;
+    line-height: 30px;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  .modal__login-button {
+    width: calc(50% - 10px);
+    padding: 13px;
+    box-sizing: border-box;
+    font: inherit;
+    line-height: 24px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    background-color: $light-brown;
+  }
+
+  .modal__close {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    top: 129px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    padding: 54px 70px 57px;
+
+    .modal__title {
+      @include title-font-tablet;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .modal__input {
+      padding: 19px 24px;
+      padding-right: 45px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    .modal__icon {
+      right: 25px;
+    }
+
+    .modal__memorize-me {
+      margin-bottom: 33px;
+    }
+
+
+    .modal__login-button {
+      width: 100%;
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 56px;
+      right: -108px;
+      width: 36px;
+      height: 38px;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      background-color: transparent;
+      border: none;
+
+      transform: rotate(45deg);
+
+      &::before {
+        content: "";
+        position: relative;
+        left: 0;
+        top: 18px;
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: $white;
+      }
+
+      &::after {
+        content: "";
+        position: relative;
+        left: 17px;
+        display: block;
+        width: 2px;
+        height: 36px;
+        background-color: $white;
+      }
+    }
+  }
+}
