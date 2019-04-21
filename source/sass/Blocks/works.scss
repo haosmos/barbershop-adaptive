@@ -5,7 +5,7 @@
   padding-bottom: 67px;
 
   &::after {
-    @include delimiter($bg-lightgrey);
+    @include delimiter($mid-grey);
   }
 
   .works__title {
@@ -90,7 +90,7 @@
 
     &--hair {
       padding-left: 36px;
-      background-image: url("../img/scissors-icon.svg");
+      background-image: url("../img/haircut.svg");
       background-size: 23px 22px;
     }
 
