@@ -125,7 +125,7 @@ gulp.task("webp", function() {
 
 /* Сборка спрайта SVG */
 gulp.task("sprite", function() {
-  return gulp.src("./build/img/inline-icons/*.svg")
+  return gulp.src("./build/img/*.svg")
     .pipe(svgstore({/* Делает спрайт из SVG-файлов */
       inLineSvg: true
     }))
