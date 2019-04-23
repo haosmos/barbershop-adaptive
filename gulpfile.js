@@ -59,12 +59,12 @@ var include = require("posthtml-include");
 
 
 /* Минифицирует HTML */
-gulp.task("html", function() {  /* Название таски*/
+gulp.task("html", function() {  /* Название таски */
   return gulp.src("./source/*.html")  /* Место, где лежат исходные файлы */
     .pipe(posthtml([
       include()  /* Конвертирует все <include></include> */
     ]))
-    .pipe(htmlmin({  /* Минификация HTML*/
+    .pipe(htmlmin({  /* Минификация HTML */
       collapseWhitespace: true,
       ignoreCustomFragments: [ /<br>\s/gi ]  /* Не убираем пробел после <br> */
     }))
@@ -105,7 +105,7 @@ gulp.task("scripts", function () {
     .pipe(server.stream());
 });
 
-/* Минифицирует изображения*/
+/* Минифицирует изображения */
 gulp.task("images", function() {
   return gulp.src("./source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([  /* Плагин для работы с png, svg, jpg */
@@ -164,7 +164,7 @@ gulp.task("images-watch", function() {
     "images",
     "webp",
     "sprite",
-    "html"  /* Перезагрузка страницы*/
+    "html"  /* Перезагрузка страницы */
     );
 });
 
