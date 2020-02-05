@@ -9,8 +9,8 @@
 - [Галерея готовых работ](https://haosmos.bitbucket.io/photo.html "Ссылка на галерею готовых работ")
 
 ### Использованные технологии:
-- HTML 5
-- CSS 3
+- HTML5
+- CSS3
 - JavaScript
 - БЭМ
 - SASS
